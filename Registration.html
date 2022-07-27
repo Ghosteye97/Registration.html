@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Registration Form | </title>--->
+    <link rel="stylesheet" href="style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Member Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Surname</span>
+            <input type="text" placeholder="Enter your Surname" required>
+          </div>
+          <div class="input-box">
+            <span class="details">ID Dumber</span>
+            <input type="text" placeholder="Enter your ID Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your Phone number" required>
+          </div>
+            <form method="post" action="Selection">
+              <box>
+                       <legend>Which type are you? (Tick only one box)</legend>
+                       <input type="checkbox" name="Type" value="Unit Owner" onclick="return ValidateSelection();">An Individual<br>
+                       <input type="checkbox" name="Type" value="Business" onclick="return ValidateSelection();">A Business<br>
+                </box>
+               </form>
+                         <script type="text/javascript">
+               function ValidateSelection()
+               {
+               var checkboxes = document.getElementsByName("Type");
+               var numberOfCheckedItems = 0;
+               for(var i = 0; i < checkboxes.length; i++)
+               {
+               if(checkboxes[i].checked)
+               numberOfCheckedItems++;
+               }
+               if(numberOfCheckedItems > 1)
+               {
+               alert("You can't select more than one Option");
+               return false;
+               }
+               }
+            </script>
+          <br>
+          <div class="input-box">
+            <span class="details">Email Address</span>
+            <input type="text" placeholder="Enter your Email Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Email Address:</span>
+            <input type="text" placeholder="Confirm your Email Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Postal address:</span>
+            <input type="text" placeholder="Enter your Postal Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Company Registration Number</span>
+            <input type="text" placeholder="Company Registration Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Account Reference Number</span>
+            <input type="text" placeholder="Account Reference number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="text" placeholder="Confirm your password" required>
+            </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
